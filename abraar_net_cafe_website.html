@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abraar Net Cafe & Digital Services | Noonepalli, Nandyal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Top Notification / Quick Bar -->
+    <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-xs sm:text-sm py-2 px-4 shadow-sm">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fas fa-map-marker-alt text-accent-500 mr-1.5"></i> Noonepalli, Nandyal</span>
+                <span class="hidden md:inline"><i class="fas fa-clock text-accent-500 mr-1.5"></i> Mon - Sat: 8:00 AM - 9:00 PM</span>
+            </div>
+            <div class="flex items-center gap-4 font-medium">
+                <a href="tel:9700616882" class="hover:text-accent-500 transition-colors"><i class="fas fa-phone-alt text-accent-500 mr-1.5"></i> +91 97006 16882</a>
+                <a href="https://wa.me/919700616882" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm">
+                    <i class="fab fa-whatsapp"><span>WhatsApp Chat</span></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+                    <i class="fas fa-print text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 leading-none">
+                        ABRAAR <span class="text-brand-600">NET CAFE</span>
+                    </h1>
+                    <p class="text-xs font-medium text-slate-500 mt-1 tracking-wide">AZMAL NET CAFE • NANDYAL</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+                <a href="#services" class="hover:text-brand-600 transition-colors">Services</a>
+                <a href="#quick-prices" class="hover:text-brand-600 transition-colors">Price List</a>
+                <a href="#about" class="hover:text-brand-600 transition-colors">About Us</a>
+                <a href="#location" class="hover:text-brand-600 transition-colors">Location & Map</a>
+                <a href="#contact" class="hover:text-brand-600 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:9700616882" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg shadow-brand-600/25 transition-all hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-slate-700 hover:text-brand-600 focus:outline-none p-2 rounded-lg">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#services" class="block py-2 text-slate-700 font-medium hover:text-brand-600 border-b border-slate-100">Services</a>
+            <a href="#quick-prices" class="block py-2 text-slate-700 font-medium hover:text-brand-600 border-b border-slate-100">Price List</a>
+            <a href="#about" class="block py-2 text-slate-700 font-medium hover:text-brand-600 border-b border-slate-100">About Us</a>
+            <a href="#location" class="block py-2 text-slate-700 font-medium hover:text-brand-600 border-b border-slate-100">Location & Map</a>
+            <a href="#contact" class="block py-2 text-slate-700 font-medium hover:text-brand-600 border-b border-slate-100">Contact</a>
+            <div class="pt-2">
+                <a href="tel:9700616882" class="w-full bg-brand-600 text-white text-center py-3 rounded-xl font-semibold block shadow-md">
+                    <i class="fas fa-phone-alt mr-2"></i> Call: 97006 16882
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-brand-900 via-brand-800 to-slate-900 text-white py-20 lg:py-28 overflow-hidden">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-amber-500 rounded-full filter blur-3xl opacity-15"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-brand-800/80 border border-brand-700/60 px-4 py-1.5 rounded-full text-brand-200 text-xs sm:text-sm font-medium backdrop-blur-md">
+                        <span class="w-2.5 h-2.5 rounded-full bg-accent-500 animate-pulse"></span>
+                        Trusted Online & Printing Hub in Noonepalli, Nandyal
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Your One-Stop Destination for <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-500 to-amber-200">Digital & Printing Services</span>
+                    </h1>
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0">
+                        Fast service, affordable rates, and reliable execution for bulk xerox, PAN cards, government job applications, passport services, lamination, and PVC cards.
+                    </p>
+                    
+                    <!-- Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#services" class="w-full sm:w-auto bg-accent-500 hover:bg-accent-600 text-slate-950 px-8 py-4 rounded-xl font-bold text-base shadow-xl shadow-accent-500/20 transition-all hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                            <i class="fas fa-th-large"></i> Explore Services
+                        </a>
+                        <a href="https://wa.me/919700616882?text=Hello%20Abraar%20Net%20Cafe,%20I%20need%20assistance%20with..." target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold text-base shadow-xl shadow-green-600/20 transition-all hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-lg"></i> Quick WhatsApp Enquiry
+                        </a>
+                    </div>
+
+                    <!-- Highlights Badge Row -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-brand-800/60 max-w-lg mx-auto lg:mx-0 text-center sm:text-left">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-accent-500">100%</p>
+                            <p class="text-xs text-slate-400 mt-1">Accurate Online Work</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-accent-500">Fast</p>
+                            <p class="text-xs text-slate-400 mt-1">Bulk Xerox & Printing</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-accent-500">Trusted</p>
+                            <p class="text-xs text-slate-400 mt-1">Local Nandyal Service</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Card: Quick Info / Address Box -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white/10 backdrop-blur-xl border border-white/15 p-6 sm:p-8 rounded-3xl shadow-2xl relative">
+                        <div class="absolute -top-3 right-6 bg-accent-500 text-slate-950 font-bold text-xs uppercase px-3 py-1 rounded-full shadow">
+                            Open Now
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fas fa-store text-accent-500"></i> Abraar (Azmal) Net Cafe
+                        </h3>
+                        <div class="space-y-4 text-slate-200 text-sm sm:text-base">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-map-marker-alt text-accent-500 mt-1 flex-shrink-0"></i>
+                                <p><strong class="text-white">Address:</strong> Beside Lawyer Srinu Office, Near Old Andhra Bank, Opp. Khaja Masthan Medical Shop, Noonepalli, Nandyal - 518501</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-phone-alt text-accent-500 flex-shrink-0"></i>
+                                <p><strong class="text-white">Phone / WhatsApp:</strong> <a href="tel:9700616882" class="underline hover:text-accent-500">9700616882</a></p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-clock text-accent-500 flex-shrink-0"></i>
+                                <p><strong class="text-white">Timing:</strong> 8:00 AM to 9:00 PM (All Days)</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-white/10 flex gap-3">
+                            <a href="#location" class="flex-1 bg-white/15 hover:bg-white/25 text-white py-2.5 rounded-xl text-center font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                            <a href="tel:9700616882" class="flex-1 bg-accent-500 hover:bg-accent-600 text-slate-950 py-2.5 rounded-xl text-center font-semibold text-sm transition-all flex items-center justify-center gap-2 shadow">
+                                <i class="fas fa-phone"></i> Direct Call
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider bg-brand-100 px-3 py-1 rounded-full">What We Offer</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Comprehensive Cyber Cafe & Digital Services</h2>
+                <p class="text-slate-600 mt-3 text-base sm:text-lg">From urgent government document applications to high-volume bulk printing, we handle all your technical requirements under one roof.</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-copy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Bulk Xerox & Printing</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">High-speed Black & White and Full Color bulk xerox, document printing, assignment printouts, and binding at best student & business rates.</p>
+                    <span class="inline-block text-xs font-semibold text-brand-600 bg-brand-50 px-2.5 py-1 rounded-md">B&W & Color Prints</span>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">PAN Card Services</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">New PAN Card applications, correction in name, date of birth, photo, signature, address, and duplicate PAN card reprints with fast processing.</p>
+                    <span class="inline-block text-xs font-semibold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md">New & Corrections</span>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Passport Services</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Fresh passport online application, passport renewals before expiry, address or spelling corrections, and appointment slot booking assistance.</p>
+                    <span class="inline-block text-xs font-semibold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md">New, Renewal & Updates</span>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Government Job Applications</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Online applications for SSC, UPSC, IBPS, Railways, APPSC, Police recruitment, DSC, and various state & central competitive exams with error-free entry.</p>
+                    <span class="inline-block text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">All Competitive Exams</span>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-address-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Voter ID & Aadhaar Works</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">New voter registration, shifting constituencies, EPIC card downloads, voter list checks, and demographic updates.</p>
+                    <span class="inline-block text-xs font-semibold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-md">Voter ID & EPIC</span>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">RC Downloads & Vehicle Services</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Vehicle Registration Certificate (RC) print & download, Driving Licence (DL) status, challan payments, and transport portal services.</p>
+                    <span class="inline-block text-xs font-semibold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-md">RC & DL Services</span>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Passport Size Photos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Instant studio-quality passport size photographs for visa, job applications, college admissions, and ID cards delivered in minutes.</p>
+                    <span class="inline-block text-xs font-semibold text-rose-700 bg-rose-50 px-2.5 py-1 rounded-md">Instant Photos</span>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-id-badge"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">PVC Cards & Lamination</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">High-durability plastic PVC smart cards printing for Aadhaar, PAN, driving licence, ID cards, along with document lamination & spiral binding.</p>
+                    <span class="inline-block text-xs font-semibold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">PVC & Lamination</span>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Bill Payments & Money Transfer</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Electricity bill payments, mobile recharges, DTH, fast FASTag top-ups, AEPS cash withdrawals, and secure money transfers.</p>
+                    <span class="inline-block text-xs font-semibold text-orange-700 bg-orange-50 px-2.5 py-1 rounded-md">Utility & AEPS</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Feature Highlights Section -->
+    <section id="quick-prices" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider bg-brand-100 px-3 py-1 rounded-full">Transparent Pricing</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Affordable Rates with Uncompromised Quality</h2>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        We believe in transparent, budget-friendly pricing for all our patrons in Noonepalli and surrounding areas of Nandyal. Special discount rates available for bulk xerox and student projects.
+                    </p>
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs"><i class="fas fa-check"></i></div>
+                            <span class="text-slate-700 font-medium">Bulk Xerox special price slabs available</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs"><i class="fas fa-check"></i></div>
+                            <span class="text-slate-700 font-medium">Instant digital delivery on WhatsApp / Email</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs"><i class="fas fa-check"></i></div>
+                            <span class="text-slate-700 font-medium">Expert assistance for all online applications</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Price Table Card -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-800">
+                        <h3 class="text-xl font-bold mb-6 flex items-center justify-between">
+                            <span><i class="fas fa-tags text-accent-500 mr-2"></i> Popular Services & Reference Rates</span>
+                            <span class="text-xs font-normal text-slate-400 bg-slate-800 px-3 py-1 rounded-full">Updated 2026</span>
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-3 border-b border-slate-800 text-sm sm:text-base">
+                                <span class="text-slate-300 font-medium">Black & White Print / Xerox</span>
+                                <span class="font-bold text-accent-500">₹10 - ₹3 <span class="text-xs font-normal text-slate-400">/ page</span></span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-slate-800 text-sm sm:text-base">
+                                <span class="text-slate-300 font-medium">Color Print / Xerox</span>
+                                <span class="font-bold text-accent-500">₹20 - ₹15 <span class="text-xs font-normal text-slate-400">/ page</span></span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-slate-800 text-sm sm:text-base">
+                                <span class="text-slate-300 font-medium">PAN Card (New / Correction)</span>
+                                <span class="font-bold text-accent-500">Affordable Service Fee</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-slate-800 text-sm sm:text-base">
+                                <span class="text-slate-300 font-medium">Lamination & Spiral Binding</span>
+                                <span class="font-bold text-accent-500">₹20 onwards</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-slate-800 text-sm sm:text-base">
+                                <span class="text-slate-300 font-medium">PVC Smart Card Printing</span>
+                                <span class="font-bold text-accent-500">Best Quality Card</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 text-sm sm:text-base">
+                                <span class="text-slate-300 font-medium">Job / Govt Online Applications</span>
+                                <span class="font-bold text-accent-500">Nominal Charges</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <p class="text-xs text-slate-400 text-center sm:text-left">Need bulk discounting? Call us directly for special quotes.</p>
+                            <a href="tel:9700616882" class="w-full sm:w-auto bg-accent-500 hover:bg-accent-600 text-slate-950 font-bold px-6 py-2.5 rounded-xl text-sm transition-all text-center">
+                                <i class="fas fa-phone mr-1.5"></i> Call 9700616882
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider bg-brand-100 px-3 py-1 rounded-full">About Abraar Net Cafe</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Your Neighborhood Digital Partner in Noonepalli</h2>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Also known as <strong class="text-slate-900">Azmal Net Cafe</strong>, we have been serving students, job seekers, families, and business owners in Noonepalli, Nandyal with dedication and accuracy.
+                    </p>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Whether you need urgent passport assistance, government examination forms filled without errors, PAN card corrections, or bulk xerox copies delivered on time, our experienced staff ensures prompt and friendly service every single day.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                            <p class="text-3xl font-extrabold text-brand-600">Fast</p>
+                            <p class="text-sm text-slate-600 mt-1">Quick Turnaround Time</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                            <p class="text-3xl font-extrabold text-brand-600">Reliable</p>
+                            <p class="text-sm text-slate-600 mt-1">100% Accurate Data Entry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-tr from-brand-900 to-brand-700 p-8 sm:p-10 rounded-3xl text-white shadow-xl relative overflow-hidden">
+                    <div class="absolute -bottom-10 -right-10 w-60 h-60 bg-accent-500 rounded-full filter blur-3xl opacity-20"></div>
+                    <h3 class="text-2xl font-bold mb-4 relative z-10"><i class="fas fa-map-pin text-accent-500 mr-2"></i> Easily Accessible Location</h3>
+                    <p class="text-slate-200 text-sm sm:text-base mb-6 relative z-10 leading-relaxed">
+                        Conveniently located in Noonepalli right beside Lawyer Srinu Office, near the Old Andhra Bank, and opposite Khaja Masthan Medical Shop. Easy parking and hassle-free access.
+                    </p>
+                    <div class="space-y-3 relative z-10 text-sm">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-landmark text-accent-500 w-5"></i>
+                            <span>Near Old Andhra Bank, Noonepalli</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-user-tie text-accent-500 w-5"></i>
+                            <span>Beside Lawyer Srinu Office</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-clinic-medical text-accent-500 w-5"></i>
+                            <span>Opp. Khaja Masthan Medical Shop</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-city text-accent-500 w-5"></i>
+                            <span>Nandyal, Andhra Pradesh - 518501</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 relative z-10">
+                        <a href="#location" class="inline-block bg-accent-500 hover:bg-accent-600 text-slate-950 font-bold px-6 py-3 rounded-xl transition-all shadow-md">
+                            <i class="fas fa-map-marked-alt mr-2"></i> View Directions on Map
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Directions Section -->
+    <section id="location" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider bg-brand-100 px-3 py-1 rounded-full">Find Us</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Visit Abraar Net Cafe in Nandyal</h2>
+                <p class="text-slate-600 text-mt-3 text-base sm:text-lg mt-3">Drop by our shop in Noonepalli for instant service or call us before you visit for quick assistance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Left Details Box -->
+                <div class="lg:col-span-5 bg-slate-50 border border-slate-200 p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt text-brand-600"></i> Store Address
+                        </h3>
+                        <div class="space-y-4 text-slate-700 text-base">
+                            <p class="font-bold text-slate-900 text-lg">Abraar Net Cafe (Azmal Net Cafe)</p>
+                            <p class="leading-relaxed">
+                                Beside Lawyer Srinu Office,<br>
+                                Near Old Andhra Bank,<br>
+                                Opp. Khaja Masthan Medical Shop,<br>
+                                Noonepalli, Nandyal, Andhra Pradesh - 518501
+                            </p>
+                            <div class="pt-4 border-t border-slate-200 space-y-2">
+                                <p><strong class="text-slate-900">Phone:</strong> <a href="tel:9700616882" class="text-brand-600 font-semibold underline">9700616882</a></p>
+                                <p><strong class="text-slate-900">Working Hours:</strong> Monday to Sunday, 8:00 AM – 9:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
+                        <a href="https://maps.google.com/?q=Noonepalli+Nandyal" target="_blank" class="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 px-4 rounded-xl text-center shadow-md transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-external-link-alt"></i> Open Google Maps
+                        </a>
+                        <a href="tel:9700616882" class="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-4 rounded-xl text-center shadow-md transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-phone"></i> Call Shop
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Map Preview Box -->
+                <div class="lg:col-span-7 bg-slate-200 rounded-3xl overflow-hidden shadow-inner border border-slate-300 min-h-[400px] flex items-center justify-center relative">
+                    <!-- Embedded Google Map centered on Noonepalli, Nandyal -->
+                    <iframe 
+                        title="Abraar Net Cafe Location Map"
+                        class="w-full h-full absolute inset-0 border-0"
+                        loading="lazy"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.755493638421!2d78.4842!3d15.4855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb5b0b2e8d8d8d9%3A0x6b8d8d8d8d8d8d8d!2sNoonepalli%2C%20Nandyal%2C%20Andhra%20Pradesh%20518501!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin"
+                        allowfullscreen="">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Inquiry / Contact Section -->
+    <section id="contact" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-accent-500 font-semibold text-sm uppercase tracking-wider bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Get in Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold">Have Questions or Need a Service Done Urgently?</h2>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        Send us your requirement or inquiry right here, or reach out instantly via phone or WhatsApp. We respond promptly during working hours!
+                    </p>
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-slate-800 text-accent-500 flex items-center justify-center text-xl flex-shrink-0 border border-slate-700">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Call Us Anytime</p>
+                                <a href="tel:9700616882" class="text-lg font-bold hover:text-accent-500 transition-colors">97006 16882</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-slate-800 text-green-500 flex items-center justify-center text-xl flex-shrink-0 border border-slate-700">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">WhatsApp Message</p>
+                                <a href="https://wa.me/919700616882" target="_blank" class="text-lg font-bold hover:text-green-400 transition-colors">Chat on WhatsApp</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-slate-800 text-blue-400 flex items-center justify-center text-xl flex-shrink-0 border border-slate-700">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Location</p>
+                                <p class="text-base font-semibold">Noonepalli, Nandyal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form Box -->
+                <div class="lg:col-span-6 bg-slate-800/90 border border-slate-700 p-8 rounded-3xl shadow-2xl backdrop-blur-md">
+                    <h3 class="text-2xl font-bold mb-6 text-white">Send Quick Message</h3>
+                    
+                    <!-- Form Status Message Box -->
+                    <div id="form-msg" class="hidden mb-4 p-4 rounded-xl text-sm font-medium"></div>
+
+                    <form id="inquiry-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Your Name</label>
+                            <input type="text" id="name" required placeholder="Enter your full name" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="Enter 10-digit mobile number" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Select Service</label>
+                            <select id="service" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                                <option value="Bulk Xerox & Printing">Bulk Xerox & Printing</option>
+                                <option value="PAN Card Services">PAN Card Services (New / Correction)</option>
+                                <option value="Passport Services">Passport Services (New / Renewal)</option>
+                                <option value="Government Job Applications">Government Job Applications</option>
+                                <option value="Voter ID Services">Voter ID / EPIC Works</option>
+                                <option value="RC Download / Vehicle Works">RC Download & Vehicle Services</option>
+                                <option value="Passport Photos / PVC Cards">Passport Photos & PVC Cards</option>
+                                <option value="Lamination & Spiral Binding">Lamination & Spiral Binding</option>
+                                <option value="Other Digital Service">Other Digital Service</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Your Message / Requirement</label>
+                            <textarea id="message" rows="3" placeholder="Describe what you need..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-accent-500 hover:bg-accent-600 text-slate-950 font-bold py-3.5 rounded-xl shadow-lg shadow-accent-500/20 transition-all text-base flex items-center justify-center gap-2">
+                            <i class="fas fa-paper-plane"></i> Submit Inquiry / Send to WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-white font-extrabold text-lg mb-4 flex items-center gap-2">
+                        <i class="fas fa-print text-accent-500"></i> ABRAAR NET CAFE
+                    </h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Your dependable neighborhood cyber cafe in Noonepalli, Nandyal for all digital, printing, government application, and documentation needs.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="hover:text-white transition-colors">Our Services</a></li>
+                        <li><a href="#quick-prices" class="hover:text-white transition-colors">Price List</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#location" class="hover:text-white transition-colors">Location & Map</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Top Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><span class="hover:text-white transition-colors">Bulk Xerox & Color Print</span></li>
+                        <li><span class="hover:text-white transition-colors">PAN Card & Voter ID</span></li>
+                        <li><span class="hover:text-white transition-colors">Passport Renewal & New</span></li>
+                        <li><span class="hover:text-white transition-colors">Govt Job Applications</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-map-marker-alt text-accent-500 mr-2"></i> Noonepalli, Nandyal</li>
+                        <li><i class="fas fa-phone-alt text-accent-500 mr-2"></i> <a href="tel:9700616882" class="hover:text-white">9700616882</a></li>
+                        <li><i class="fab fa-whatsapp text-green-500 mr-2"></i> <a href="https://wa.me/919700616882" target="_blank" class="hover:text-white">WhatsApp Connected</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Abraar Net Cafe (Azmal Net Cafe), Noonepalli, Nandyal. All rights reserved.</p>
+                <p>Designed for High Performance & Local Community Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Form Handling -->
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Handle Inquiry Form Submission (Directs to WhatsApp with pre-filled message)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value.trim();
+
+            const msgBox = document.getElementById('form-msg');
+            
+            if(!name || !phone) {
+                msgBox.className = 'mb-4 p-4 rounded-xl text-sm font-medium bg-red-900/50 text-red-200 border border-red-700';
+                msgBox.innerText = 'Please fill in your name and phone number.';
+                msgBox.classList.remove('hidden');
+                return;
+            }
+
+            const waText = `Hello Abraar Net Cafe,%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Service:* ${encodeURIComponent(service)}%0A*Message:* ${encodeURIComponent(message)}`;
+            
+            msgBox.className = 'mb-4 p-4 rounded-xl text-sm font-medium bg-green-900/50 text-green-200 border border-green-700';
+            msgBox.innerText = 'Redirecting to WhatsApp with your inquiry...';
+            msgBox.classList.remove('hidden');
+
+            setTimeout(() => {
+                window.open(`https://wa.me/919700616882?text=${waText}`, '_blank');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
